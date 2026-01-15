@@ -7,8 +7,8 @@ import React, { useState, useCallback } from 'react';
 import axios from 'axios';
 import JobCard from './components/JobCard';
 
-// API Base URL - FastAPI backend
-const API_URL = 'http://localhost:8000';
+// API Base URL - Uses environment variable in production
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
 // Türkiye'nin 81 ili
 const TURKISH_CITIES = [
